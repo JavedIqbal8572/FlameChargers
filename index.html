@@ -278,26 +278,26 @@
  <!-- Contact -->
     <section class="contact" id="contact">
       <h1 class="contact-heading ttile">Co<span style="animation: contact-s 35s infinite;">ntac</span>t Me</h1>
-      <form class="contact-form center" action="message.php" method="post">
+      <form class="contact-form center">
         <div class="input-group">
           <label>Full Name *</label>
-          <input type="text" class="contact-input" placeholder="Enter Your Name" name="name" required />
+          <input type="text" class="contact-input" placeholder="Enter Your Name" name="name" id="nam" required />
         </div>
         <div class="input-groups">
           <div class="input-group">
             <label>Email *</label>
-            <input type="email" class="contact-input" placeholder="Enter Your Email" name="email" required />
+            <input type="email" class="contact-input" placeholder="Enter Your Email" name="email" id="eml" required />
           </div>
           <div class="input-group">
             <label>Phone</label>
-            <input type="text" class="contact-input" placeholder="Enter Phone Number" name="phone" required />
+            <input type="text" class="contact-input" placeholder="Enter Phone Number" name="phone" id="phn" required />
           </div>
         </div>
         <div class="input-group">
           <label>Message</label>
-          <textarea class="form-textarea" placeholder="Your Message Here..." name="message" required></textarea>
+          <textarea class="form-textarea" placeholder="Your Message Here..." name="message" id="msg" required></textarea>
         </div>
-        <input type="submit" onmousedown="pop.play()" value="Submit" class="form-btn" />
+        <input type="submit" onmousedown="pop.play()" value="Submit" onclick="subform" class="form-btn" />
       </form>
     </section>
     <!-- End of Contact -->
@@ -319,7 +319,15 @@
     <!-- End of Footer -->
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
+  <script>
+var subform = () =>{
+var name =document.getElementById("nam").value;
+var phone =document.getElementById("phn").value;
+var email =document.getElementById("eml").value;
+var message ="Name : "+name+"\nPhone : "+phone+"\nEmail : "+email+"\nMessage : "+document.getElementById("msg").value;
+var msgbody= encodeURIComponent(message);
+window.location.href="'mailto:afifislam8572@gmail.com&subject=Enquiry%20from%20Flame%20Chargers&body='+msgbody";}
+</script>
 
 
   <script src="./NavBar.js"></script>
