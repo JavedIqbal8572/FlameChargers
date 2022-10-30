@@ -1,0 +1,1980 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+/* Common Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Vollkorn", serif;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+
+
+
+
+::-webkit-scrollbar{
+    /* background: linear-gradient(to bottom, #cc0000 8%, #000066 70%); */
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb
+    {
+      background: linear-gradient(to bottom, #cc0000 0%, #660066 83%);
+    /* background:linear-gradient(transparent,#30ff00); */
+    
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    /* background:linear-gradient(transparent,#30ff00); */
+    background: linear-gradient(to bottom, #E6E6FA 0% ,#EE82EE 40%, #c95ce4 53% ,#9932CC 100%);
+    
+    border-radius: 6px;
+  }
+  
+  ::-moz-scrollbar{
+    width: 8px;
+  }
+  ::-moz-scrollbar-thumb{
+    
+    background: linear-gradient(to bottom, #cc0000 0%, #660066 83%);
+    border-radius: 6px;
+  }
+  
+  
+  ::-o-scrollbar{
+    width: 8px;
+  }
+  ::-o-scrollbar-thumb{
+    
+    background: linear-gradient(to bottom, #cc0000 0%, #660066 83%);
+    border-radius: 6px;
+  }
+
+  
+
+
+
+
+
+  header{
+    width: 80vw;
+    height: 100vh;
+  }
+
+
+  
+::selection {
+    background-color: transparent;
+    color: yellowgreen;
+    opacity: 0.5;
+    text-shadow: 2px 2px 1px #000;
+    font-weight: 900;
+  }
+  #loadeer{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #c7ecee;
+    position: fixed;
+    z-index: 999999999;
+  }
+  #lodeer .loader{
+      width: 100px;
+      height: 100px;
+     
+      /* margin: 50px auto; */
+      position: fixed;
+       z-index: 1800;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      top: calc(45% - 1.25em);
+      left: calc(46% - 1.25em);
+       
+  } 
+  
+  #loadeer .loader:before, .loader:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 0.25em;
+      transform: translate(-50%, -50%);
+      }
+    #loadeer  .loader:before {
+      animation: before 1.5s infinite;
+      }
+      
+  #loadeer .loader:after {
+      animation: after 1.5s infinite;
+      }
+  
+      
+  @keyframes before {
+      0% {
+      width: 0.5em;
+      box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+      35% {
+      width: 2.5em;
+      box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+      }
+      70% {
+      width: 0.5em;
+      box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+      100% {
+      box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+      }
+      }
+      @keyframes after {
+      0% {
+      height: 0.5em;
+      box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+      }
+      35% {
+      height: 2.5em;
+      box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+      }
+      70% {
+      height: 0.5em;
+      box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+      }
+      100% {
+      box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+      }
+  } 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: #2b81e4;
+  --secondary-color: #eee;
+  --white-color: #fff;
+  --grey-color: #546de5;
+  --light-grey-color: #777;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    background-image: url("./troops/coc-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  margin: 3.5rem;
+  box-shadow: 0 1rem 3rem #555;
+  overflow: hidden;
+}
+
+/* End of Common styles */
+
+/* Navbar */
+.navbar-icon {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.open-navbar-icon {
+  position: fixed;
+  top: 6.5rem;
+  left: 6.5rem;
+  z-index: 200;
+}
+
+.navbar-icon .line {
+  height: 0.2rem;
+  width: 3.5rem;
+  background-color: var(--light-grey-color);
+}
+
+.open-navbar-icon .line {
+  margin: 0.3rem 0;
+}
+
+.navbar-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  opacity: 0;
+  z-index: 300;
+  padding: 3.5rem 5.5rem 3.5rem 3.5rem;
+  transition: bottom 0.5s, opacity 0.2s;
+}
+
+.change .navbar-wrapper {
+  bottom: 0;
+  opacity: 1;
+  transition: bottom 0.5s, opacity 0.2s 0.25s;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+    url(img/jonew3.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.close-navbar-icon {
+  position: absolute;
+  top: 2.5rem;
+  right: 3rem;
+  z-index: 300;
+}
+
+.close-navbar-icon .line {
+  position: absolute;
+}
+
+.line-1 {
+  transform: rotate(40deg);
+}
+
+.line-2 {
+  transform: rotate(-40deg);
+}
+
+.nav-list {
+  height: 100%;
+  display: flex;
+}
+
+.nav-link {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white-color);
+  text-transform: uppercase;
+  width: 100%;
+  opacity: 0.8;
+  position: relative;
+  top: -100%;
+  transition: all 0.3s;
+}
+
+.change .nav-link {
+  top: 0;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.change .nav-link:nth-child(1) {
+  transition: top 1s 0.4s, opacity 0.3s, color 0.3s;
+}
+
+.change .nav-link:nth-child(2) {
+  transition: top 1s 0.6s, opacity 0.3s, color 0.3s;
+}
+
+.change .nav-link:nth-child(3) {
+  transition: top 1s 0.8s, opacity 0.3s, color 0.3s;
+}
+
+.change .nav-link:nth-child(4) {
+  transition: top 1s 1s, opacity 0.3s, color 0.3s;
+}
+
+.change .nav-link:nth-child(5) {
+  transition: top 1s 1.2s, opacity 0.3s, color 0.3s;
+}
+
+
+.change .nav-link:nth-child(6) {
+  transition: top 1s 1.4s, opacity 0.3s, color 0.3s;
+}
+
+
+.change .nav-link:nth-child(7) {
+    transition: top 1s 1.6s, opacity 0.3s, color 0.3s;
+  }
+/* End of Navbar */
+
+/* Header */
+.header {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url(img/jo9.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+  perspective: 100rem;
+}
+
+.header-text {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 0.3rem 0.5rem #000;
+}
+
+.heading {
+  font-size: 8rem;
+  color: var(--white-color);
+}
+
+.header-paragraph {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  max-width: 70rem;
+  margin: auto;
+}
+
+.logo {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+
+.logo h1 {
+  display: flex;
+}
+
+.logo h1 span {
+  font-size: 2rem;
+  font-weight: 900;
+  color: crimson;
+  text-transform: uppercase;
+  background-color: #7ed6df;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+#dark{
+  color:white;
+  background-color: black;
+}
+
+.logo h1 span:nth-child(1) {
+  animation: drop-letters 5s 0.1s infinite;
+}
+
+.logo h1 span:nth-child(2) {
+  animation: drop-letters 5s 0.2s infinite;
+}
+
+.logo h1 span:nth-child(3) {
+  animation: drop-letters 5s 0.3s infinite;
+}
+
+.logo h1 span:nth-child(4) {
+  animation: drop-letters 5s 0.4s infinite;
+}
+
+.logo h1 span:nth-child(5) {
+  animation: drop-letters 5s 0.5s infinite;
+}
+
+.logo h1 span:nth-child(6) {
+  animation: drop-letters 5s 0.6s infinite;
+}
+
+.logo h1 span:nth-child(7) {
+  animation: drop-letters 5s 0.7s infinite;
+}
+
+.logo h1 span:nth-child(8) {
+  animation: drop-letters 5s 0.8s infinite;
+}
+/* 
+.logo h1 span:nth-child(9) {
+  animation: drop-letters 5s 0.9s infinite;
+}
+
+.logo h1 span:nth-child(10) {
+  animation: drop-letters 5s 1s infinite;
+}
+
+.logo h1 span:nth-child(11) {
+  animation: drop-letters 5s 1.1s infinite;
+}
+
+.logo h1 span:nth-child(12) {
+  animation: drop-letters 5s 1.2s infinite;
+}
+
+.logo h1 span:nth-child(13) {
+  animation: drop-letters 5s 1.3s infinite;
+} */
+
+@keyframes drop-letters {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-100%);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header-image {
+  width: 35%;
+  animation: image-float 100s infinite;
+}
+
+@keyframes image-float {
+  0% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+  40% {
+    transform: translateZ(-500rem) translateX(150rem);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translateZ(-1000rem) translateX(800rem);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateZ(-50rem) translateX(100rem);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+}
+/* End of Header */
+
+/* Popular tours */
+.popular-tours {
+  padding: 5rem 0 10rem 0;
+}
+
+.ttile {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: 8rem;
+  letter-spacing: 0.6rem;
+  font-weight: 500;
+  /* color: var(--primary-color); */
+  /* text-shadow: 0 0.1rem 0.2rem var(--primary-color); */
+}
+.ttile span {
+  font-family: 'Fredericka the Great', cursive;
+  color: crimson;
+}
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 35rem;
+  position: relative;
+  perspective: 150rem;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.front-side {
+  text-align: center;
+  background-color: var(--white-color);
+  border-radius: 0.3rem;
+  position: relative;
+  z-index: 10;
+  opacity: 0.9;
+  transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+}
+
+.change > .front-side {
+  transform: translateZ(-5rem) translateX(3rem);
+  box-shadow: 0 2rem 4rem #777;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.tour-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 37%;
+  right: 1.5rem;
+  color: var(--white-color);
+  text-shadow: 0 0 1rem #000;
+  }
+  .head img {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+
+  .ds img {
+    width: 400px;
+    height: 450px;
+    margin-top: 30px;
+    position: absolute;
+    top: -100px;
+    left: -50px;
+  /* transform: skewY(1,1); */
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+.card-list {
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0 3rem 0;
+}
+
+.card-list-item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--light-grey-color);
+  margin: 2rem 0;
+  border-bottom: 0.1rem solid var(--primary-color);
+  padding-bottom: 1.5rem;
+}
+
+.back-side {
+  position: absolute;
+  top: 0;
+  /* background-color: var(--primary-color); */
+  background-image: url("troops/coc-background.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+  box-shadow: 0 2rem 4rem #777;
+  flex-direction: column;
+  transform: translateZ(-5rem) translateX(3rem);
+  opacity: 0.5;
+  transition: opacity 0.9s, transform 0.4s, box-shadow 0.8s;
+}
+
+.change > .back-side {
+  transform: translateZ(0) translateX(0);
+  box-shadow: 0 0.5rem 2rem #aaa;
+  opacity: 0.9;
+}
+
+.tour-price {
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--white-color);
+  margin-bottom: 3rem;
+}
+
+.card-button {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  border: none;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  letter-spacing: 0.2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.navigation-button {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--light-grey-color);
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+/* End of Popular tours */
+
+
+
+
+
+
+
+
+
+
+
+#about .about {
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  background-image: url(./img/jo16.jpg);
+  background-attachment: fixed;
+  position: relative;
+  
+  background-color: #fdcb6e;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#about .col-left {
+  width: 100px;
+  height: 360px;
+}
+#about .col-right {
+  width: 100%;
+  color: white;
+}
+#about .col-right h2 {
+  font-size: 1.2rem;
+  line-height: 10em;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-bottom: 5px;
+}
+
+#about .col-right p ::selection {
+  color: greenyellow;
+  background-color: transparent;
+}
+
+#about .col-right p::first-letter {
+  color: rgb(17, 21, 212);
+  font-size: 10rem;
+  float: left;
+  font-family: 'Lovers Quarrel', cursive;
+  display: block;
+  margin: 41px 7px 0 0;
+  padding-left: 5px;
+  line-height: 0.3em;
+  font-weight: bold;
+  /* text-shadow: none; */
+}
+
+#about .col-right p::first-line {
+  color: rgb(17, 21, 212);
+  font-weight: bold;
+  text-shadow: 0.3px 1.5px 1px black;
+  font-size: 6rem;
+}
+#about .col-right p {
+  margin-bottom: 20px;
+  color: yellowgreen;
+  font-weight: 520;
+  font-size: 6rem;
+  font-family: 'Lovers Quarrel', cursive;
+  line-height: 1.1em;
+  text-shadow: 1.5px 1.5px 1px black;
+  letter-spacing: 0.1rem;
+}
+#about .col-right .footer-link {
+  color: white;
+  /* margin-bottom: 200px; */
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  background: transparent;
+  /* padding: 0.3rem 3rem; */
+  letter-spacing: 0.3rem;
+  transition: all 0.6s;
+  transform-origin: center;
+}
+
+
+#about .col-right .footer-link:hover {
+  color: #000;
+  transform: rotate(-10deg);
+}
+.boot{
+  display: flex;  
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #182C61;
+  padding: 4rem 0 2rem 0;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link {
+  font-size: 2rem;
+  color: var(--white-color);
+  margin: 0 2rem;
+  background-color: #182C61;
+  padding: 0.3rem 3rem;
+  letter-spacing: 0.3rem;
+  transition: all 0.2s;
+}
+
+.footer-link:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0 2rem 3rem #000;
+}
+
+.footer-paragraph {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  letter-spacing: 0.2rem;
+  margin-top: 5rem;
+}
+/* End of Footer */
+
+
+
+@media only screen and (min-width: 768px) {
+  
+  /* About */
+  #about .about {
+    flex-direction: row;
+    background-image: url(./img/jonew6.jpg);
+  }
+  #about .col-left {
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+  }
+  #about .col-right p {
+    margin-bottom: 20px;
+    /* color: green; */
+    color: yellowgreen;
+    font-weight: 520;
+    font-size: 4.3rem;
+    line-height: 1.2em;
+    text-shadow: 1px 2px 1px black;
+    letter-spacing: 0.1rem;
+    font-family: 'Lovers Quarrel', cursive;
+  }
+  #about .col-right p::selection{
+    color: green;
+    background-color: transparent;
+  }
+  #about .about .col-left .about-img::after {
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid crimson;
+  }
+
+  #about .col-right {
+    text-align: left;
+    padding: 30px;
+  }
+  #about .col-right h1 {
+    text-align: left;
+  }
+  /* End About */
+  
+.boot{
+  display: flex;  
+  flex-direction: row;
+   justify-content: space-between; 
+}
+
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin: 3rem 0;
+  }
+
+  .story-bg {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-list {
+    flex-direction: column;
+  }
+  .card-item{
+    display: flex;
+   flex-direction: row;
+   /* max-width: 1200px; */
+   margin: 0 auto;
+ }
+
+  
+.head img {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: -90px;
+  left: -25px;
+ 
+  margin-top: 10px;
+  margin-right: 30px;
+ 
+}
+
+.ds img {
+  width: 300px;
+  height: 350px;
+  margin-top: 30px;
+  position: absolute;
+  top: -100px;
+  left: -50px;
+ /* transform: skewY(1,1); */
+  margin-left: 30px;
+  padding-bottom: 20px;
+}
+
+  .nav-link {
+    flex-grow: 1;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .heading {
+    font-size: 6rem;
+  }
+
+  .header-paragraph {
+    font-size: 2.5rem;
+  }
+
+  .popular-tours-heading {
+    font-size: 6rem;
+  }
+
+  .story-bg {
+    transform: skewX(0);
+  }
+
+  .story {
+    transform: skewX(0);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-image {
+    margin-bottom: 3rem;
+  }
+
+  .footer-link {
+    padding: 0.3rem 2rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-paragraph {
+    display: none;
+  }
+
+  .popular-tours-heading {
+    font-size: 5rem;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  .footer-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-link {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    margin: 0;
+  }
+
+  .open-navbar-icon {
+    top: 2.5rem;
+    left: 2.5rem;
+  }
+
+  .navbar-wrapper {
+    padding: 0;
+  }
+
+  .close-navbar-icon {
+    right: 4rem;
+  }
+
+  .header {
+    height: 100vh;
+  }
+
+  .contact-heading {
+    font-size: 6rem;
+  }
+
+  .contact-form {
+    padding: 2rem;
+    height: 40rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+}
+.autotype {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem;
+ right: 30px;
+  width: fit-content;
+}
+.autotype h2 {
+  color: orangered;
+}
+.autotype h2 span {
+  color: white;
+}
+
+h2 {
+  font-weight: 200;
+  margin: 0.4rem;
+  margin-left: -10px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+/* h2 {
+  font-size: 2rem;
+  color: #aaa;
+} */
+
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid orangered;
+  animation: blink 1s infinite;
+}
+/* .curs span {
+  display: inline-block;
+  width: 3px;
+  background-color: orangered;
+  margin-left: 0.1rem;
+  animation: blink 1s infinite;
+} */
+@keyframes blink {
+  0% {
+    border-right: 0.2rem solid orangered;
+  }
+  50% {
+    border-right: 0.2rem solid transparent;
+  }
+  100% {
+    border-right: 0.2rem solid orangered;
+  }
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .autotype {
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  /*   h2 {
+    font-size: 1.5rem;
+  } */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about_div {
+    padding: 30px 15px;
+  }
+  
+  .about_div h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ec9b3b;
+    margin-top: -25px;
+    padding-bottom: 10px;
+  }
+  
+  .about_div h1 {
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Berkshire Swash', cursive;
+    color: #000;
+  }
+  
+  .about_div p {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #273c75;
+  }
+  #ncard .lower_div{
+    /* background: linear-gradient(to bottom, rgb(240, 10, 240) 40%, #9f61dd 53% ,#ce20ce 100%); */
+    background: linear-gradient(to bottom, rgb(240, 10, 240) 40%, #9f61dd 53% ,#C71585 100%);
+  }
+  #dcard .lower_div{
+    /* background: linear-gradient(to bottom, #be5eee 0% ,#db4ddb 40%, #9f61dd 53% ,#da2eda 100%); rgb(240, 10, 240) 0% ,*/
+    background: linear-gradient(to bottom, rgb(59, 42, 42) 0% ,rgb(39, 37, 37) 40%, rgb(24, 23, 23) 53% ,#000 100%);
+  }
+  
+  #scard .lower_div{
+     background: linear-gradient(to bottom, #A55A0F 0% ,#964B00 40%, #873C00 53% ,#782D00 100%);
+  }
+  #card .lower_div{
+    /* background: linear-gradient(to bottom, #be5eee 0% ,#db4ddb 40%, #9f61dd 53% ,#da2eda 100%); rgb(240, 10, 240) 0% ,*/
+    background: linear-gradient(to bottom, #E6E6FA 0% ,#EE82EE 40%, #c95ce4 53% ,#9932CC 100%);
+  }
+  
+  #hcard .lower_div{
+    background: linear-gradient(to bottom, #C5B358	 0% ,#CFB53B	 30%, #D4AF37 40% ,#FFD700 99% ,#FFD700 100%);
+  }
+  .lower_div {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #ec9b3b; */
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  
+  .lower_div div {
+    padding: 10px 0;
+    color: #fff;
+    flex-grow: 1;
+    border-right: 1px solid white;
+  }
+  
+  .lower_div div:last-child {
+    border-right: none;
+  }
+  
+  .lower_div .lower_number {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 3px;
+  }
+  
+  .lower_div .lower_text {
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+  body {
+    background-image: url("./troops/coc-background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+   */
+   /* .card {
+     display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto; */
+  
+  .main_div-items {
+    max-width: 100%;
+  }
+   .card-item {
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    transition: 0.3s ease box-shadow;
+  }
+  
+  .center_div {
+    width: 280px;
+    height: auto;
+    position: relative;
+    margin: 50px;
+    top: 20%;
+    left: 0%;
+  
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: -1px 15px 30px -10px black;
+    background-color: white;
+  }
+  
+  .img_div {
+    width: inherit;
+    height: 260px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to right, #67624c, #767c6e); */
+    border-top-left-radius: 16px;
+    background-image: url("./troops/barbarian-bg.jpg");
+    border-top-right-radius: 16px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #card .barbarian img {
+    width: 400px;
+    height: 350px;
+    position: absolute;
+    top: -80px;
+    left: -80px;
+  
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  #card .loon img {
+    width: 280px;
+    height: 420px;
+    position: absolute;
+    top: -170px;
+    left: 50px;
+    margin-top: 50px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  #card .dragon img {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -180px;
+    left: -60px;
+    margin-top: 80px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  #card .wallbraker img {
+    width: 360px;
+    height: 250px;
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  #card .babydragon img {
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    top: -60px;
+    left: 55px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  #card .elecdragon img {
+    width: 400px;
+    height: 370px;
+    position: absolute;
+    top: -95px;
+    left: -45px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  #card .archer img {
+    width: 400px;
+    height: 320px;
+    margin-top: 30px;
+    position: absolute;
+    top: -70px;
+    right: -100px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  #card .pakka img {
+    width: 350px;
+    height: 340px;
+    margin-top: 30px;
+    position: absolute;
+    top: -80px;
+    right: -50px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  #card .yeti img {
+    width: 380px;
+    height: 350px;
+    margin-top: 30px;
+    position: absolute;
+    top: -90px;
+    right: -60px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  #card .miner img {
+    width: 350px;
+    height: 350px;
+    margin-top: 30px;
+    position: absolute;
+    top: -85px;
+    right: -35px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  #card .heler img {
+    width: 350px;
+    height: 345px;
+    margin-top: 30px;
+    position: absolute;
+    top: -95px;
+    right: -40px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #scard .ww img{
+    width: 380px;
+   height: 300px; 
+   /* background-color: #000; */
+   position: absolute;
+   top: -13px;
+   left: -25px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  #scard .bb img{
+   width: 390px;
+   height: 300px;
+   position: absolute;
+   top: -50px;
+   left: -70px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  #scard .ss img{
+   width: 295px;
+   height: 370px;
+   position: absolute;
+   top: -110px;
+   left: 40px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  #scard .sb img{
+   width: 350px;
+   height: 420px;
+   position: absolute;
+   top: -133px;
+   left: -40px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #ncard .rb img {
+    width: 330px;
+    height: 310px;
+    position: absolute;
+    top: -30px;
+    left:1px; 
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .sa img {
+    width: 310px;
+    height: 330px;
+    position: absolute;
+    top: -50px;
+    left: -5px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .boxg img {
+    width: 340px;
+    height: 360px;
+    position: absolute;
+    top: -80px;
+    left: -20px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .bm img {
+    width: 300px;
+    height: 35 0px;
+    position: absolute;
+    top: -70px;
+    left: 50px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .bom img {
+    width:300px;
+    height: 420px;
+    position: absolute;
+    top: -140px;
+    left: -40px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .nbd img {
+    width: 340px;
+    height: 325px;
+    position: absolute;
+    top: -80px;
+    left: -1px;
+    margin-top: 5px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .cc img {
+    width: 330px;
+    height: 340px;
+    margin-top: 30px;
+    position: absolute;
+    top: -75px;
+    right: -40px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .nw img {
+    width: 360px;
+    height: 385px;
+    margin-top: 30px;
+    position: absolute;
+    top: -125px;
+    right: -50px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .ds img {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    position: absolute;
+    top: -105px;
+    left: -90px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .npekka img {
+    width: 360px;
+    height: 390px;
+    margin-top: 30px;
+    position: absolute;
+    top: -130px;
+    right: -50px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #ncard .hg img {
+    width: 390px;
+    height: 360px;
+    margin-top: 30px;
+    position: absolute;
+    top: -80px;
+    right: -50px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #hcard .king img{
+    width: 350px;
+   height: 380px; 
+   /* background-color: #000; */
+   position: absolute;
+   top: -85px;
+   left: -15px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  #hcard .grand img{
+   width: 400px;
+   height: 380px;
+   position: absolute;
+   top: -110px;
+   left: -50px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  #hcard .royalc img{
+   width: 320px;
+   height: 360px;
+   position: absolute;
+   top: -90px;
+   left: -20px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  #hcard .queen img{
+   width: 300px;
+   height: 420px;
+   position: absolute;
+   top: -110px;
+   left: 15px;
+   margin-top: 10px;
+   margin-right: 30px;
+   padding-bottom: 20px;
+  }
+  
+  #hcard .bm img{
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    top: -150px;
+    left: -45px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #dcard .minnion img {
+    width: 320px;
+    height: 300px;
+    position: absolute;
+    top: -50px;
+    left: 40px; 
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .bowler img {
+    width: 470px;
+    height: 350px;
+    position: absolute;
+    top: -20px;
+    left: 50px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .valk img {
+    width: 320px;
+    height: 340px;
+    position: absolute;
+    top: -60px;
+    left: -20px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .lava img {
+    width: 300px;
+    height: 35 0px;
+    position: absolute;
+    top: -100px;
+    left: 50px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .head img {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -130px;
+    left: -40px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .witch img {
+    width: 360px;
+    height: 385px;
+    position: absolute;
+    top: -100px;
+    left: -10px;
+    margin-top: 5px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .hog img {
+    width: 330px;
+    height: 380px;
+    margin-top: 30px;
+    position: absolute;
+    top: -125px;
+    right: -40px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .golem img {
+    width: 330px;
+    height: 343px;
+    margin-top: 30px;
+    position: absolute;
+    top: -85px;
+    right: -20px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .bowler img {
+    width: 470px;
+    height: 350px;
+    margin-top: 30px;
+    position: absolute;
+    top: -90px;
+    left: -90px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  #dcard .ice img {
+    width: 400px;
+    height: 440px;
+    margin-top: 30px;
+    position: absolute;
+    top: -130px;
+    right: -90px;
+  
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (min-width: 1200px) {
+
+    .main_div-items {
+       display: flex;
+       flex-direction: row;
+      }
+
+
+
+
+
+
+
+  }
